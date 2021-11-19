@@ -25,4 +25,16 @@
             <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:ProfilePage}" />
         </Tab>
     </FlyoutItem>
+
+    <!--
+    <TabBar>
+        <Tab Title="Dashboard">
+            <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate pages:DashboardPage}" />
+        </Tab>
+        <Tab Title="Profile">
+            <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        </Tab>
+    </TabBar>
+
+    -->
 </Shell>

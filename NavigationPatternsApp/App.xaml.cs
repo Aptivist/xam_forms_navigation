@@ -4,13 +4,17 @@ using Xamarin.Forms.Xaml;
 
 namespace NavigationPatternsApp
 {
+    /// <summary>
+    /// Xamarin.Forms Navigation
+    /// https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/
+    /// </summary>
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new HomeTabbedPage();
+            //MainPage = new StackNavigationPage();
+            // = new HomeTabbedPage();
             //MainPage = new FlyoutNavigationPage();
             //MainPage = new NavigationPage(new StackNavigationPage());
             //MainPage = new HomeCarouselPage();
