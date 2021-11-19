@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavigationPatternsApp.Pages.ItemsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:NavigationPatternsApp.Models"
+    xmlns:pages="clr-namespace:NavigationPatternsApp.Pages"
+    Title="Items">
+    <ListView x:Name="listView" x:FieldModifier="public">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type models:FlyoutPageItem}">
+                <models:FlyoutPageItem Title="Dashboard" TargetType="{x:Type pages:DashboardPage}" />
+                <models:FlyoutPageItem Title="Profile" TargetType="{x:Type pages:ProfilePage}" />
+            </x:Array>
+        </ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding IconSource}" />
+                        <Label Grid.Column="1" Text="{Binding Title}" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NavigationPatternsApp.HomeShellPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:NavigationPatternsApp.Pages">
+    <FlyoutItem Title="Dashboard">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:DashboardPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Profile">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Items">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:ItemsPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Tabs">
+        <Tab>
+            <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate pages:DashboardPage}" />
+            <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:ProfilePage}" />
+        </Tab>
+    </FlyoutItem>
+</Shell>
