@@ -4,8 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Stack Navigation">
-    <StackLayout>
-        <Label Text="Stack Navigation" />
-        <Button Clicked="Button_Clicked" Text="Next" />
+    <StackLayout Padding="16">
+        <Label Text="Phone Dialer" />
+        <Entry x:Name="phoneEntry" Placeholder="Phone Number" />
+        <Button Clicked="Button_Clicked" Text="Call" />
     </StackLayout>
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NavigationPatternsApp.Interfaces;
 using NavigationPatternsApp.Pages;
 using Xamarin.Forms;
 
@@ -14,7 +15,8 @@ namespace NavigationPatternsApp
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new DashboardPage());
+            var service = DependencyService.Get<IPhoneDialer>();
+            service.Call(phoneEntry.Text);
         }
     }
 }

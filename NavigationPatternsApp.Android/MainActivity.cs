@@ -4,6 +4,9 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Xamarin.Forms;
+using NavigationPatternsApp.Interfaces;
+using NavigationPatternsApp.Droid.Services;
 
 namespace NavigationPatternsApp.Droid
 {
@@ -13,7 +16,8 @@ namespace NavigationPatternsApp.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            //register singleton, using a different way
+            DependencyService.RegisterSingleton<IPhoneDialer>(new PhoneDialer(this));
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
