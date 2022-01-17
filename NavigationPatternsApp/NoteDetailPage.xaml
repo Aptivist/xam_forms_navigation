@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavigationPatternsApp.NoteDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:NavigationPatternsApp.Controls;assembly=NavigationPatternsApp">
+    <StackLayout>
+        <controls:ProfileView VerticalOptions="CenterAndExpand" />
+        <Entry Placeholder="Title" />
+        <Editor Placeholder="Detail" />
+        <Button Text="Save" VerticalOptions="EndAndExpand" />
+    </StackLayout>
+</ContentPage>

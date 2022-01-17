@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="NavigationPatternsApp.Controls.ProfileView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Frame
+        Margin="16"
+        BackgroundColor="Blue"
+        BorderColor="Red">
+        <StackLayout>
+            <Label Text="Jair" />
+            <Label Text="5930 Abbotss Run Trail" />
+        </StackLayout>
+    </Frame>
+
+</ContentView>

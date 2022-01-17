@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavigationPatternsApp.MyFormPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:NavigationPatternsApp.Converters;assembly=NavigationPatternsApp"
+    xmlns:viewModels="clr-namespace:NavigationPatternsApp.ViewModels;assembly=NavigationPatternsApp"
+    x:Name="myPage"
+    Title="My Form"
+    BackgroundColor="{Binding ColorName}">
+    <ContentPage.Resources>
+        <converters:NumerToWord x:Key="NumerToWord" />
+        <converters:NumberToCelsius x:Key="NumberToCelsius" />
+    </ContentPage.Resources>
+    <StackLayout Margin="20" Spacing="20">
+        <Label Text="{Binding Results, Converter={StaticResource NumberToCelsius}, ConverterParameter='C'}" />
+        <Entry Placeholder="Title" Text="{Binding Results, Converter={StaticResource NumerToWord}, Mode=OneWay}" />
+        <Slider
+            x:Name="mySlider"
+            Maximum="100"
+            Minimum="0"
+            Value="{Binding Results}" />
+        <Label HorizontalTextAlignment="Center" Text="{Binding Results, Converter={StaticResource NumberToCelsius}, ConverterParameter='F'}" />
+        <Button
+            Command="{Binding ChangeCommand}"
+            Text="Change"
+            VerticalOptions="EndAndExpand" />
+        <Button
+            Command="{Binding ShowDataCommand}"
+            Text="Show"
+            VerticalOptions="EndAndExpand" />
+    </StackLayout>
+</ContentPage>

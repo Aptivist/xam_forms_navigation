@@ -17,9 +17,17 @@
   <ItemGroup>
     <None Remove="Pages\" />
     <None Remove="Models\" />
+    <None Remove="Interfaces\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Controls\" />
+    <None Remove="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

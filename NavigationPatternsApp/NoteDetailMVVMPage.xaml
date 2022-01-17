@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavigationPatternsApp.NoteDetailMVVMPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout>
+        <Entry Placeholder="Title" Text="{Binding Title}" />
+        <Entry Placeholder="Detail" Text="{Binding Detail}" />
+        <Button Command="{Binding SaveCommand}" Text="Save" />
+    </StackLayout>
+</ContentPage>
