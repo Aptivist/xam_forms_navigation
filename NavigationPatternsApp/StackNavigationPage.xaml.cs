@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using NavigationPatternsApp.Interfaces;
 using NavigationPatternsApp.Pages;
 using Xamarin.Essentials;
 using Xamarin.Forms;
