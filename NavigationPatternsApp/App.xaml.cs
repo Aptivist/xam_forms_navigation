@@ -18,7 +18,18 @@ namespace NavigationPatternsApp
             //MainPage = new FlyoutNavigationPage();
             //MainPage = new NavigationPage(new StackNavigationPage());
             //MainPage = new HomeCarouselPage();
-            MainPage = new HomeShellPage();
+            //MainPage = new HomeShellPage();
+            MainPage = new NavigationPage(new MyLoginPage());
+        }
+
+        public void ShowHomePage()
+        {
+            MainPage = new NavigationPage(new MyHomePage());
+        }
+
+        public void Logout()
+        {
+            MainPage = new NavigationPage(new MyLoginPage());
         }
 
         protected override void OnStart()
